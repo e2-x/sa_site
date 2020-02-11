@@ -1,9 +1,7 @@
 body {
   background-color: #3e4045;
+  padding: 20px;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -29,7 +27,8 @@ ul.header li a {
 }
 
 .content {
-  padding: 20px;
+  padding: 100px;
+  background-color: darkgray;
 }
 
 .content h2 {
