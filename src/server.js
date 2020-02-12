@@ -6,12 +6,6 @@ const port = process.env.PORT || 5000;
 const cors = require('cors');
 
 const IMG_LOCATION = 'img/';
-const IMAGES = 
-        [{
-            src: "https://imgur.com/a/wMZ01ia",
-            thumbnail: "https://imgur.com/a/wMZ01ia",
-        }]
-
 
 let files = fs.readdirSync(IMG_LOCATION);
 
@@ -21,9 +15,9 @@ app.use(cors());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
-app.get('/api/hello', (req, res) => {
+app.get('/api/img', (req, res) => {
   // res.send({ express: 'Hello From Express' });
-  createImg(res, files);
+  sendImg(res, files);
 });
 
 app.post('/api/world', (req, res) => {
@@ -36,6 +30,6 @@ app.post('/api/world', (req, res) => {
 app.listen(port, () => console.log(`Listening on port ${port}`));
 
 // HELPER FUNCTIONS
-function createImg(res, files){
-    res.send({ IMAGES });
+function sendImg(res, files){
+    res.send({files});
 }
