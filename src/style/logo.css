@@ -1,0 +1,14 @@
+.logo_div {
+    padding: 20px;
+    overflow: auto;
+}
+.logo_div img {
+    margin: auto;
+    width: 100px;
+    height: 100px;
+    display: block;
+}
+
+.logo_div h3 {
+    text-align: center;
+}

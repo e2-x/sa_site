@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import Gallery from 'react-grid-gallery'
 
 import '../style/App.css';
+import '../style/gallery.css';
 
 import img1 from '../img/spray_1.jpg';
 import img2 from '../img/spray_2.jpg';
@@ -12,14 +13,9 @@ import img6 from '../img/spray_6.jpg';
 
 function importAll(r){
     let images = [];
-    // for(let i = 0; i < r.length; i++){
     images.push(r);
-    // console.dir(images);
     console.log(typeof(r));
     console.log(r);
-    // r.keys().map((item, index) => {
-    //     images[item] = r(item);
-    // });
     return images
 }
 
@@ -90,13 +86,8 @@ class gallery extends Component{
         const imgImport = importAll(this.state.apiResponse);
         // console.dir(this.state.apiResponse);
         return (
-            <div style={{
-                display: "block",
-                width: "100%",
-                float: "left",
-                overfloat: "auto",
-                border: "1px solid #ddd" }}>
-                <Gallery images={IMAGES} lightboxWidth={1423}/>
+            <div className="gallery_div">
+                <Gallery images={IMAGES} lightboxWidth={500}/>
             </div>
         );
     }

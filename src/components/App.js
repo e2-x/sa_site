@@ -3,9 +3,10 @@ import logo_v2 from '../img/logo_v2.png';
 import { Route, NavLink, HashRouter } from 'react-router-dom';
 
 import '../style/App.css';
-import Nav from './nav'
-import About from './about'
-import Work from './work'
+import Nav from './nav';
+import About from './about';
+import Work from './work';
+import Logo from './logo';
 
 // class App extends Component {
 
@@ -81,6 +82,7 @@ function App() {
   return (
     <HashRouter>
       <div className="App">
+        <Logo />
         <Nav />
         <div className="content">
           <Route exact path="/" component={About}/>
