@@ -6,8 +6,8 @@ import '../style/logo.css'
 function logo() {
     return (
         <div className="logo_div">
-            <h3>Placeholder</h3>
             <img src={logo_v2} alt="notfound"/>
+            <h3>Placeholder</h3>
         </div>
     );
 }

@@ -1,5 +1,7 @@
 import React, { Component } from 'react'
-import Gallery from 'react-grid-gallery'
+// import Gallery from 'react-grid-gallery'
+import Gallery from 'react-awesome-slider'
+
 
 import '../style/App.css';
 import '../style/gallery.css';
@@ -11,6 +13,13 @@ import img4 from '../img/spray_4.jpg';
 import img5 from '../img/spray_5.jpg';
 import img6 from '../img/spray_6.jpg';
 
+import AwesomeSlider from 'react-awesome-slider';
+
+import AnimationStyles from 'react-awesome-slider/src/styled/fold-out-animation/fold-out-animation.scss';
+import CoreStyles from 'react-awesome-slider/src/core/styles.scss'
+
+import 'react-awesome-slider/dist/styles.css';
+
 function importAll(r){
     let images = [];
     images.push(r);
@@ -19,43 +28,16 @@ function importAll(r){
     return images
 }
 
-const IMAGES = 
-        [{
-            src: img1,
-            thumbnail: img1,
-            thumbnailWidth: 520,
-            thumbnailHeight: 570 
-        },
-        {
-            src: img2,
-            thumbnail: img2,
-            thumbnailWidth: 320,
-            thumbnailHeight: 270 
-        },
-        {
-            src: img3,
-            thumbnail: img3,
-            thumbnailWidth: 520,
-            thumbnailHeight: 570 
-        },
-        {
-            src: img4,
-            thumbnail: img4,
-            thumbnailWidth: 520,
-            thumbnailHeight: 570 
-        },
-        {
-            src: img5,
-            thumbnail: img5,
-            thumbnailWidth: 520,
-            thumbnailHeight: 570 
-        },
-        {
-            src: img6,
-            thumbnail: img6,
-            thumbnailWidth: 520,
-            thumbnailHeight: 570 
-        }]
+// TODO: Switch to AwesomeSlider for displaying images
+const IMAGES = (
+    <AwesomeSlider animation="foldOutAnimation" cssModule={CoreStyles}>
+        <div data-src={img1}/>
+        <div data-src={img2}/>
+        <div data-src={img3}/>
+        <div data-src={img4}/>
+        <div data-src={img5}/>
+    </AwesomeSlider>
+);
 
 class gallery extends Component{
     constructor(props) {
@@ -84,10 +66,9 @@ class gallery extends Component{
     render(){
 
         const imgImport = importAll(this.state.apiResponse);
-        // console.dir(this.state.apiResponse);
         return (
             <div className="gallery_div">
-                <Gallery images={IMAGES} lightboxWidth={500}/>
+                {IMAGES}
             </div>
         );
     }

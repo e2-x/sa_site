@@ -7,6 +7,7 @@ import Nav from './nav';
 import About from './about';
 import Work from './work';
 import Logo from './logo';
+import Contact from './contact'
 
 // class App extends Component {
 
@@ -88,6 +89,7 @@ function App() {
           <Route exact path="/" component={About}/>
           <Route path="/work" component={Work}/>
         </div>
+      <Contact />
       </div>
     </HashRouter>
   );

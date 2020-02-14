@@ -1,10 +1,11 @@
 .about_div {
     display: flex;
     margin: auto;
+    height: fit-content;
     /* margin-left: 20%; */
     /* margin-right: 20%; */
 }
 
 .flex-item {
-    flex-grow: 1;
+    /* flex-grow: 1; */
 }

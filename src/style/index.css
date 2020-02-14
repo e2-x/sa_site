@@ -1,9 +1,19 @@
+html {
+  overflow: scroll;
+  overflow-x: hidden;
+}
+::-webkit-scrollbar {
+  width: 0px;;
+  background: transparent;
+}
+
 body {
   background-color: #3e4045;
   padding: 20px;
   margin: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
 }
 
 h1, h2, p, ul, li {
@@ -22,24 +32,33 @@ ul.header {
 
 ul.header li a {
   text-decoration: none;
-  padding: 20px;
+  padding: 15px;
   display: inline-block;
 }
 
 .content {
-  /* padding: 100px; */
-  /* background-color: darkgray; */
+  overflow: hidden;
+  text-align: center;
 }
 
 .content h2 {
   padding: 0;
   margin: 0;
 }
+.content div {
+}
 
 .content li {
   margin-bottom: 10px;
 }
 
+a:visited {
+  color: #FFF;
+}
+
+a:hover {
+  opacity: 0.7;
+}
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
